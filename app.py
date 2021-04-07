@@ -15,4 +15,5 @@ def index():
 #     return "2nd elective is, python_Flask"
 @app.route("/<string:name>")# will print message for string what we are giving 
 def hello(name):
+    name = name.capitalize()
     return f"Hello, {name}!"
