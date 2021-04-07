@@ -1,15 +1,22 @@
-import datetime
+#import datetime
 from flask import Flask, render_template
 
 
 app = Flask (__name__)
 
+@app.route("/")
+def index():
+    names = ["sai", "kiran", "warmsiee", "nowyah!!"]
+    return render_template("index.html", names=names)
+# @app.route('/')
+# def index():  
+#      now = datetime.datetime.now()
+#      new_year = now.month==1 and now.day ==1
+#      #new_year = True
+#      text = "yes" if new_year else ""
 
-@app.route('/')
-def index():  
-     now = datetime.datetime.now()
-     new_year = now.month==1 and now.day ==1
-     return render_template("index.html",new_year=new_year)
+#      return render_template("index.html",new_year=new_year)
+
 #     headline = "hello, saikiran!!"             #
 #     return render_template("index.html", headline=headline)
 
