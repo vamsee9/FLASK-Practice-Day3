@@ -16,4 +16,4 @@ def index():
 @app.route("/<string:name>")# will print message for string what we are giving 
 def hello(name):
     name = name.capitalize()
-    return f"Hello, {name}!"
+    return f"<h1>Hello, {name}!</h1>"
