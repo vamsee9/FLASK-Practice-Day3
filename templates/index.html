@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block body %}
-    <p>
-        hello welcome to the 1st page of the website 
-    </p>
-    <a href="{{ url_for('more') }}">for more information ....</a>
+    <form action="{{ url_for('hello') }}" method ="post">
+        <input type ="text" name = "name" placeholder = " Enter Your Name">
+        <button>Submit</button>
+    </form>
 {% endblock %}
 
 
