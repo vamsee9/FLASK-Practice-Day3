@@ -5,8 +5,18 @@ app = Flask (__name__)
 
 
 @app.route('/')
-def index():
-    return render_template("index.html")
+def index():   
+    headline = "hello, saikiran!!"             #
+    return render_template("index.html", headline=headline)
+
+@app.route("/bye")
+def bye():
+    headline = "Good bye!"
+    return render_template("index.html", headline=headline)
+   
+   
+   
+   
     #return "hello world"
 # # @app.route("/saikiran")
 # # def saikiran():
